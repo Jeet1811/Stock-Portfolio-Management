@@ -35,7 +35,7 @@ Integrated with Marketstack API for live stock prices
 📘 Installation Guide
 
 Clone the repository:
-git clone https://github.com/Jeet1811/Portfolio-Tracker.git  
+git clone "https://github.com/Jeet1811/Stock-Portfolio-Management.git"
 
 ## Frontend Setup
 
