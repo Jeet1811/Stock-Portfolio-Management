@@ -11,8 +11,10 @@ function OtpInput({ onOtpValidated }) {
   const username = localStorage.getItem('username'); // Get username from localStorage
 
   const validateOtp = () => {
-    fetch(process.env.REACT_APP_VERIFY_OTP_URL, {
+    // fetch(process.env.REACT_APP_VERIFY_OTP_URL, {
+      fetch('http://localhost:8081/otp/verify', {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },

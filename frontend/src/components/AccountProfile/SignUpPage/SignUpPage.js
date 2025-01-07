@@ -44,8 +44,10 @@ function SignUpPage() {
       setError('Passwords do not match.');
       return;
     }
-    fetch(process.env.REACT_APP_SIGNUP_URL, {
+    // fetch(process.env.REACT_APP_SIGNUP_URL, {
+      fetch('http://localhost:8081/api/users/signup', {
       method: 'POST',
+      mode:'cors',
       headers: {
         'Content-Type': 'application/json',
       },

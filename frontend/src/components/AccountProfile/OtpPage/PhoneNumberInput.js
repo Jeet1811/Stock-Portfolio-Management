@@ -8,8 +8,10 @@ function PhoneNumberInput() {
   const username = localStorage.getItem('username'); // Get username from localStorage
 
   const sendOtp = () => {
-    fetch(process.env.REACT_APP_SEND_OTP_URL, {
+    // fetch(process.env.REACT_APP_SEND_OTP_URL, {
+      fetch('http://localhost:8081/otp/send-otp', {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },

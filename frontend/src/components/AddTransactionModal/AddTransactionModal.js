@@ -100,8 +100,9 @@ const AddTransactionModal = ({ showModal, closeModal, onTransactionAdded }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/api/transactions', {
+      const response = await fetch('http://localhost:8081/api/transactions/user/', {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${jwtToken}`,

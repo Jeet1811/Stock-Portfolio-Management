@@ -28,8 +28,10 @@ function LoginPage() {
     e.preventDefault();
     setLoading(true);
 
-    fetch(process.env.REACT_APP_LOGIN_URL, {
+    // fetch(process.env.REACT_APP_LOGIN_URL, {
+      fetch('http://localhost:8081/api/users/login', {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },

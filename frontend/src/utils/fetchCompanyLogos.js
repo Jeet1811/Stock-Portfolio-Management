@@ -3,8 +3,10 @@ import defaultLogo from '../assets/defaultLogo.png'; // Adjust the path as neces
 
 const fetchCompanyLogos = async (symbols) => {
   const requests = symbols.map((symbol) =>
-    fetch(process.env.REACT_APP_LOGO_API_URL.replace('symbol', symbol), {
+    // fetch(process.env.REACT_APP_LOGO_API_URL.replace('symbol', symbol), {
+       fetch(`https://api.example.com/logos/${symbol}`, {
       method: 'GET',
+      mode: "cors",
       headers: { accept: 'application/json' },
     })
   );

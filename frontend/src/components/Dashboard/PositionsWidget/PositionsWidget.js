@@ -15,8 +15,11 @@ const PositionsWidget = ({ userId, jwt, onTransactionAdded }) => {
       return;
     }
 
-    fetch(`${process.env.REACT_APP_POSITION_WIDGET_URL}${userId}`, {
-      method: 'GET',
+    // fetch(`${process.env.REACT_APP_POSITION_WIDGET_URL}${userId}`, {
+    // fetch(`http://localhost:8081/api/positions/user/${userId}`, {
+       fetch('http://localhost:8081/api/positions/user/' + userId, {
+    method: 'GET',
+      mode: 'cors',
       headers: {
         Authorization: `Bearer ${jwt}`,
         'Content-Type': 'application/json',
@@ -184,7 +187,7 @@ const PositionsWidget = ({ userId, jwt, onTransactionAdded }) => {
           </tbody>
         </table>
         <div className="PositionWidget__footer">
-          Latest End-Of-Day data powered by marketstack
+          Latest data powered by marketstack
         </div>
       </div>
       <AddTransactionModal

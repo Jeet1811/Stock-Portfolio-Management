@@ -38,7 +38,8 @@ const TransactionsWidget = ({ userId, jwt, updateData }) => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_TRANSACTION_WIDGET_URL}${userId}`,
+          // `${process.env.REACT_APP_TRANSACTION_WIDGET_URL}${userId}`,
+          `http://localhost:8081/api/transactions/user/${userId}`,
           {
             method: 'GET',
             headers: {
