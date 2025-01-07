@@ -24,6 +24,8 @@ React
 Java with Spring Boot
 RESTful API design with proper exception handling
 
+Use Twillio apu for the OTP verification during sign-up process...
+
 ## Database
 PostgreSQL
 Schema designed to store stock details and user portfolios
